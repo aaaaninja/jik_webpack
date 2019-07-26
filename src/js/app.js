@@ -8,3 +8,4 @@ const tax = 1.08;
 const priceIncludeTax = taxCalculator(totalPrice, tax);
 
 console.log(priceIncludeTax);
+console.log("hogehogeeee");
