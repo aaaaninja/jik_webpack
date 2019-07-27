@@ -8,6 +8,6 @@ const tax = 1.08;
 const priceIncludeTax = taxCalculator(totalPrice, tax);
 
 console.log(priceIncludeTax);
-console.log("hogehogeeee");
+"hogeeeee_pipeline" |> console.log;
 
 [...Array(50)].map(() => console.log("50回喋れ"));
