@@ -1,8 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  watch: true
-, mode: "development"
+  mode: "production" //, mode: "development"
+//, watch: true
 , entry: "./src/js/app.js"
 , output: {
     filename: "bundle.js"
@@ -13,11 +13,19 @@ module.exports = {
       { test: /\.js$/
       , exclude: /node_modules/
       , use: [
-          { loader: "babel-loader", options: { presets: [ [ "@babel/preset-env", { modules: false} ]
-                                                        ]
-                                             }
+          { loader: "babel-loader"
+          , options: {
+              presets: [
+                [ "@babel/preset-env", { modules: false} ]
+              ]
+            }
           }
         ]
+      }
+    , { enforce: "pre"
+      , test: /\.js$/
+      , exclude: /node_modules/
+      , loader: "eslint-loader"
       }
     ]
   }
