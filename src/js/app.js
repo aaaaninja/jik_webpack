@@ -9,3 +9,5 @@ const priceIncludeTax = taxCalculator(totalPrice, tax);
 
 console.log(priceIncludeTax);
 console.log("hogehogeeee");
+
+[...Array(50)].map(() => console.log("50回喋れ"));
